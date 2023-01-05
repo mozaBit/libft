@@ -6,7 +6,7 @@
 /*   By: bmetehri <bmetehri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:31:53 by bmetehri          #+#    #+#             */
-/*   Updated: 2022/11/21 17:32:18 by bmetehri         ###   ########.fr       */
+/*   Updated: 2023/01/05 19:01:59 by bmetehri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	i = 0;
 	j = 0;
+	if (!size)
+		return (0);
 	while (dst[i] && i < size)
 		i++;
 	while (src[j] && size && j + i < size - 1)

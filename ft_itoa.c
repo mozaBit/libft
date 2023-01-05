@@ -6,7 +6,7 @@
 /*   By: bmetehri <bmetehri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 12:52:04 by bmetehri          #+#    #+#             */
-/*   Updated: 2023/01/03 16:24:07 by bmetehri         ###   ########.fr       */
+/*   Updated: 2023/01/05 19:05:35 by bmetehri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ char	*ft_itoa(int n)
 		length++;
 	}
 	str = malloc((length + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
 	str[length] = '\0';
 	length--;
 	do_stuff((long)n, str, &length);
